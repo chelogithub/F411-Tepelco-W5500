@@ -1,6 +1,6 @@
 STM32_ETH_W5500/ETH_W5500.o: \
- C:/STM32-IDE/STM32-LIBRARY/STM32_ETH_W5500/ETH_W5500.c \
- C:/STM32-IDE/STM32-LIBRARY/STM32_ETH_W5500/ETH_W5500.h \
+ C:/STM32-IDE/STM32-Library/STM32_ETH_W5500/ETH_W5500.c \
+ C:/STM32-IDE/STM32-Library/STM32_ETH_W5500/ETH_W5500.h \
  ../Core/Inc/main.h ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h \
  ../Core/Inc/stm32f4xx_hal_conf.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h \
@@ -30,7 +30,7 @@ STM32_ETH_W5500/ETH_W5500.o: \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
-C:/STM32-IDE/STM32-LIBRARY/STM32_ETH_W5500/ETH_W5500.h:
+C:/STM32-IDE/STM32-Library/STM32_ETH_W5500/ETH_W5500.h:
 ../Core/Inc/main.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
 ../Core/Inc/stm32f4xx_hal_conf.h:

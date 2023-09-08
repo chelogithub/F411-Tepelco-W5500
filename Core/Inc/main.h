@@ -61,12 +61,21 @@ void Error_Handler(void);
 #define PCB_LED_GPIO_Port GPIOC
 #define KEY_BTN_Pin GPIO_PIN_0
 #define KEY_BTN_GPIO_Port GPIOA
+#define PORT2TX_Pin GPIO_PIN_2
+#define PORT2TX_GPIO_Port GPIOA
+#define PORT2_RX_Pin GPIO_PIN_3
+#define PORT2_RX_GPIO_Port GPIOA
 #define SPI1_NSS_Pin GPIO_PIN_4
 #define SPI1_NSS_GPIO_Port GPIOA
 #define SPI_RST_Pin GPIO_PIN_0
 #define SPI_RST_GPIO_Port GPIOB
 #define WiFi_EN_Pin GPIO_PIN_8
 #define WiFi_EN_GPIO_Port GPIOA
+#define WF_TX_Pin GPIO_PIN_9
+#define WF_TX_GPIO_Port GPIOA
+#define WF_RX_Pin GPIO_PIN_10
+#define WF_RX_GPIO_Port GPIOA
+
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */
