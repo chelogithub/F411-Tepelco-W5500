@@ -232,7 +232,7 @@ int main(void)
 		ETH.SIPR[0]=192;
 		ETH.SIPR[1]=168;
 		ETH.SIPR[2]=0;
-		ETH.SIPR[3]=6,//ETH.SIPR[3]=34,
+		ETH.SIPR[3]=34,//ETH.SIPR[3]=34,
 	//  Socket RX memory
 		ETH.RMSR=0x55;
 	//  Socket TX memory
@@ -886,7 +886,7 @@ void SysTick_Handler(void)
 
 	if((wf._estado_conexion==609 || wf._estado_conexion==700)&&(wf._TCP_Local_Server_EN==0))  wf_snd_flag_ticks++;
 
-	if(wf_snd_flag_ticks>= 20000 && wf._ejecucion!=1 && wf._TCP_Local_Server_EN==0)		 	  WF_SND_FLAG=1;					//230517 wf_snd_flag_ticks>= 2000
+	if(wf_snd_flag_ticks>= 5000 && wf._ejecucion!=1 && wf._TCP_Local_Server_EN==0)		 	  WF_SND_FLAG=1;					//230517 wf_snd_flag_ticks>= 2000
 
 // ENVIO DATOS WF ----------------------------------- ---------------------------//
 
