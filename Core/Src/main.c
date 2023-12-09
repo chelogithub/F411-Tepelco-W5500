@@ -72,8 +72,10 @@ uint8_t error=0;
 char post[512];
 char body[512];
 char ENDPOINT[]="/tepelco",
-     SERVER_IP[]="192.168.0.91",
+     SERVER_IP[]="192.168.0.103",
      PORT[]="8000";
+
+
 
 uint8_t ETH_DBG_EN=0,ETH_DBG_SER_EN=1;
 uint8_t WF_SND_FLAG=0;
@@ -106,7 +108,8 @@ uint16_t 	S0_get_size = 0,
 			get_free_size=0,
 			get_start_address=0,
 			source_addr=0,
-			send_size=0;
+			send_size=0,
+			datos[]={1010,2010,3010,4010,5010,6010,7010,8010,9010,10010,11010,12010,13010,14010,15010,16010};
 
 // ****** End Socket Memory assignment ****** //
 uint8_t spi_Data[64],
@@ -143,7 +146,7 @@ char	UART_RX_vect[512],
 		UART2_RX_vect_hld[512],
 		WIFI_NET[]="PLC_DEV",//WIFI_NET[]="Fibertel WiFi967 2.4GHz",//WIFI_NET[]="PLC_DEV",//
 		WIFI_PASS[]="12345678",//WIFI_PASS[]="0042880756",//WIFI_PASS[]="12345678",//
-		TCP_SERVER[]="192.168.0.91",//TCP_SERVER[]="192.168.0.65",//TCP_SERVER[]="192.168.0.102",//TCP_SERVER[]="192.168.0.47",
+		TCP_SERVER[]="192.168.0.103",//TCP_SERVER[]="192.168.0.65",//TCP_SERVER[]="192.168.0.102",//TCP_SERVER[]="192.168.0.47",
 		TCP_PORT[]="8000",//TCP_PORT[]="502",
 		TCP_SERVER_LOCAL[]="192.168.0.43",//TCP_SERVER_LOCAL[]="192.168.0.33",//TCP_SERVER[]="192.168.0.47",
 		TCP_SERVER_LOCAL_GWY[]="192.168.0.99",//TCP_SERVER[]="192.168.0.47",
@@ -435,7 +438,23 @@ int main(void)
 		  				HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
 		  				ITM0_Write("\r\n#RED#WF-SE GENERA INFO Y ENVIA\r\n",strlen("\r\n#RED#WF-SE GENERA INFO Y ENVIA\r\n"));
 
-		  				if( httpPOST(	ENDPOINT, SERVER_IP,PORT,
+		  				for(uint8_t i=0;i<=16;i++)
+		  				{
+		  					datos[i]=ModBUS_F03_Read(&mb_eth,i);
+		  				}
+
+		  				if(httpPOST2(ENDPOINT, SERVER_IP,PORT,&datos,16,TEST_2,post, body, 512))
+		  				{
+  							CopiaVector(wf._data2SND,post,strlen(post),0,'A');
+  							wf._n_D2SND=strlen(post);
+  							if(wf._automatizacion < WF_SEND)		// Send only with automation sent diasabled
+  							{
+  								EnviarDatos(&wf);
+  								wf._estado_conexion=TCP_SND_EN_CURSO;
+  							}
+		  				}
+
+		  				/*if( httpPOST(	ENDPOINT, SERVER_IP,PORT,
 		  								ModBUS_F03_Read(&mb_eth,0),
 		  								ModBUS_F03_Read(&mb_eth,1),
 		  								ModBUS_F03_Read(&mb_eth,2),
@@ -445,7 +464,8 @@ int main(void)
 		  								ModBUS_F03_Read(&mb_eth,6),
 		  								ModBUS_F03_Read(&mb_eth,7),
 		  								ModBUS_F03_Read(&mb_eth,8),
-										ModBUS_F03_Read(&mb_eth,9),TEST_2,//ModBUS_F03_Read(&mb_eth,9),TEPELCO,
+										ModBUS_F03_Read(&mb_eth,9),
+										TEST_2,//ModBUS_F03_Read(&mb_eth,9),TEPELCO,
 		  								post, body, 512))
 
 		  				{
@@ -456,7 +476,7 @@ int main(void)
 		  								EnviarDatos(&wf);
 		  								wf._estado_conexion=TCP_SND_EN_CURSO;
 		  							}
-		  				}
+		  				}*/
 		  			}
 		  	  }
 		  /**************[ FIN PIDO ENVIAR DATOS ]**************/
@@ -1056,7 +1076,7 @@ if (ms_ticks==100)//(ms_ticks==250)//(ms_ticks==50)
 							ETH.data[11]=0x0A;
 							send_size=12;
 
-							ModBUS_F03_Request(&mb_eth,0,15);
+							ModBUS_F03_Request(&mb_eth,0,16);
 							CopiaVector(ETH.data, mb_eth._MBUS_2SND, 12, 0, 0 );
 
 
