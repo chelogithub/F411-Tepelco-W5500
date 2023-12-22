@@ -4794,9 +4794,9 @@ LOAD C:/ST/STM32CubeIDE_1.13.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
                 0x0000000020000000                ENDPOINT
  *fill*         0x0000000020000009        0x3 
  .data.SERVER_IP
-                0x000000002000000c        0xe ./Core/Src/main.o
+                0x000000002000000c        0xd ./Core/Src/main.o
                 0x000000002000000c                SERVER_IP
- *fill*         0x000000002000001a        0x2 
+ *fill*         0x0000000020000019        0x3 
  .data.PORT     0x000000002000001c        0x5 ./Core/Src/main.o
                 0x000000002000001c                PORT
  .data.ETH_DBG_SER_EN
@@ -4813,9 +4813,9 @@ LOAD C:/ST/STM32CubeIDE_1.13.1/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
                 0x000000002000004c                WIFI_PASS
  *fill*         0x0000000020000055        0x3 
  .data.TCP_SERVER
-                0x0000000020000058        0xe ./Core/Src/main.o
+                0x0000000020000058        0xd ./Core/Src/main.o
                 0x0000000020000058                TCP_SERVER
- *fill*         0x0000000020000066        0x2 
+ *fill*         0x0000000020000065        0x3 
  .data.TCP_PORT
                 0x0000000020000068        0x5 ./Core/Src/main.o
                 0x0000000020000068                TCP_PORT
