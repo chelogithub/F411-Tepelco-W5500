@@ -7,3 +7,7 @@ C:/STM32-IDE/STM32-Library/ModBUS/ModBUS_Chelo.c:109:10:ModBUS_F03_Read	24	stati
 C:/STM32-IDE/STM32-Library/ModBUS/ModBUS_Chelo.c:131:10:ModBUS_F04_Read	24	static
 C:/STM32-IDE/STM32-Library/ModBUS/ModBUS_Chelo.c:153:1:ModBUS_F03_Request	16	static
 C:/STM32-IDE/STM32-Library/ModBUS/ModBUS_Chelo.c:177:5:ModBUS	120	static
+C:/STM32-IDE/STM32-Library/ModBUS/ModBUS_Chelo.c:1147:9:Verificar_CRC16	24	static
+C:/STM32-IDE/STM32-Library/ModBUS/ModBUS_Chelo.c:1177:7:Agregar_CRC16aTXVect	32	static
+C:/STM32-IDE/STM32-Library/ModBUS/ModBUS_Chelo.c:1225:9:processAnswerModbusRTU	24	static
+C:/STM32-IDE/STM32-Library/ModBUS/ModBUS_Chelo.c:1245:7:createCommandRTU	24	static

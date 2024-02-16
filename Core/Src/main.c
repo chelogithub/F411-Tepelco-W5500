@@ -1381,7 +1381,7 @@ uint8_t ESP8266_HW_Init(UART_HandleTypeDef *SerialPort) //Devuelve 1 si reiniciÃ
 		  wf._n_fcomp=strlen("ready");
 		  wf._n_orig=UART_RX_items;
 
-		  while(FT_String_ND(UART_RX_vect_hld,&wf._n_orig,"ready",&wf._n_fcomp,wf._uartRCVD_tok,&wf._n_tok,&ntestc,&wf._id_conn,FIND)!=1)
+		  while(FT_String_ND(UART_RX_vect_hld,&wf._n_orig,"ready",&wf._n_fcomp,wf._uartRCVD_tok,&wf._n_tok,&ntestc,&wf._id_conn,510,FIND)!=1)
 		  {
 			  	  wf._n_orig=UART_RX_items;
 			  	  if (ESP_ticks>=5000)
@@ -1395,7 +1395,7 @@ uint8_t ESP8266_HW_Init(UART_HandleTypeDef *SerialPort) //Devuelve 1 si reiniciÃ
 		  {
 			  wf._n_fcomp=strlen("ready");
 			  wf._n_orig=UART_RX_items;
-			  while(FT_String_ND(UART_RX_vect_hld,&wf._n_orig,"ready",&wf._n_fcomp,wf._uartRCVD_tok,&wf._n_tok,&ntestc,&wf._id_conn,FIND)!=1)
+			  while(FT_String_ND(UART_RX_vect_hld,&wf._n_orig,"ready",&wf._n_fcomp,wf._uartRCVD_tok,&wf._n_tok,&ntestc,&wf._id_conn,510,FIND)!=1)
 			  {
 				  wf._n_orig=UART_RX_items;
 				  if (ESP_ticks>=5000)
