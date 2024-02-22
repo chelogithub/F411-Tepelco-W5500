@@ -114,7 +114,8 @@ uint16_t 	S0_get_size = 0,
 // ****** End Socket Memory assignment ****** //
 uint8_t spi_Data[64],
 		spi_no_debug=0,
-		_w_answer=0;
+		_w_answer=0,
+		pos_decimal[16];
 
 uint8_t ESP_REinit=0,			//Conteo de intentos de incializacion
 		ESP_InitF=0,			//Flag de error por no encontrar la sentencia
@@ -323,6 +324,23 @@ int main(void)
 		ModBUS_Config(&mb_wf);		//WIFI como servidor TCP, recibe comadno ModBUS
 		mb_wf._mode = CLIENTE;
 		ModBUS_F03_Assign(&mb_wf,3,0xAA55);
+		pos_decimal[0]=1;
+		pos_decimal[1]=1;
+		pos_decimal[2]=1;
+		pos_decimal[3]=1;
+		pos_decimal[4]=1;
+		pos_decimal[5]=1;
+		pos_decimal[6]=1;
+		pos_decimal[7]=1;
+		pos_decimal[8]=1;
+		pos_decimal[9]=1;
+		pos_decimal[10]=1;
+		pos_decimal[11]=1;
+		pos_decimal[12]=1;
+		pos_decimal[13]=1;
+		pos_decimal[14]=1;
+		pos_decimal[15]=1;
+
 	 //---------------------- ModBUS -----------------------//
   /* USER CODE END 1 */
 
@@ -443,7 +461,7 @@ int main(void)
 		  					datos[i]=ModBUS_F03_Read(&mb_eth,i);
 		  				}
 
-		  				if(httpPOST2(ENDPOINT, SERVER_IP,PORT,&datos,16,TEST_2,post, body, 512))
+		  				if(httpPOST2(ENDPOINT, SERVER_IP,PORT,&datos,&pos_decimal,16,TEST_2,post, body, 512))
 		  				{
   							CopiaVector(wf._data2SND,post,strlen(post),0,'A');
   							wf._n_D2SND=strlen(post);

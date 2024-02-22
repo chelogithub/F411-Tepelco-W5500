@@ -1,5 +1,5 @@
-STRING/STR_Chelo.o: C:/STM32-IDE/STM32-Library/STRING/STR_Chelo.c \
- C:/STM32-IDE/STM32-Library/STRING/STR_Chelo.h ../Core/Inc/main.h \
+STRING/STR_Chelo.o: C:/STM32-IDE/STM32-LIBRARY/STRING/STR_Chelo.c \
+ C:/STM32-IDE/STM32-LIBRARY/STRING/STR_Chelo.h ../Core/Inc/main.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h \
  ../Core/Inc/stm32f4xx_hal_conf.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h \
@@ -29,7 +29,7 @@ STRING/STR_Chelo.o: C:/STM32-IDE/STM32-Library/STRING/STR_Chelo.c \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
-C:/STM32-IDE/STM32-Library/STRING/STR_Chelo.h:
+C:/STM32-IDE/STM32-LIBRARY/STRING/STR_Chelo.h:
 ../Core/Inc/main.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
 ../Core/Inc/stm32f4xx_hal_conf.h:

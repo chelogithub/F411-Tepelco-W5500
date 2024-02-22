@@ -1,5 +1,5 @@
-LoRa/RYLR896.o: C:/STM32-IDE/STM32-Library/LoRa/RYLR896.c \
- C:/STM32-IDE/STM32-Library/LoRa/RYLR896.h ../Core/Inc/main.h \
+LoRa/RYLR896.o: C:/STM32-IDE/STM32-LIBRARY/LoRa/RYLR896.c \
+ C:/STM32-IDE/STM32-LIBRARY/LoRa/RYLR896.h ../Core/Inc/main.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h \
  ../Core/Inc/stm32f4xx_hal_conf.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h \
@@ -30,7 +30,7 @@ LoRa/RYLR896.o: C:/STM32-IDE/STM32-Library/LoRa/RYLR896.c \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h \
  C:/STM32-IDE/STM32-LIBRARY/STRING/STR_Chelo.h
-C:/STM32-IDE/STM32-Library/LoRa/RYLR896.h:
+C:/STM32-IDE/STM32-LIBRARY/LoRa/RYLR896.h:
 ../Core/Inc/main.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
 ../Core/Inc/stm32f4xx_hal_conf.h:
