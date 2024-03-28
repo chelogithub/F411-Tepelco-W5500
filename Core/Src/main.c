@@ -314,6 +314,7 @@ int main(void)
 		wf._estado_conexion=100;//Si no se define no arranca	//wf._estado_conexion=1;					//Arranco en WiFi Desconectado
 		wf._automatizacion=WF_CONNECT_TCP;//wf._automatizacion=WF_SEND;
 		wf._DBG_EN=1;
+		wf._NO_IP=1;
 		wf.RESET_PORT=GPIOA;
 		wf.RESET_PIN=GPIO_PIN_8;
 	 //----------------------- WIFI ------------------------//
